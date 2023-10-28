@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 400px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #4A148C, #7B1FA2, #9C27B0);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px 20px 0 0;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.display input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: right;
+  background: none;
+  color: #fff;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 20px 20px;
+  box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  height: 70px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+button.operator {
+  background: linear-gradient(45deg, #E65100, #FF5722);
+  color: #fff;
+}
+
+button.operator:hover {
+  background: linear-gradient(45deg, #FF5722, #E65100);
+  color: #fff;
+}
+
+button.equal {
+  background: linear-gradient(45deg, #00695C, #00897B, #009688);
+  color: #fff;
+}
+
+button.equal:hover {
+  background: linear-gradient(45deg, #009688, #00897B, #00695C);
+  color: #fff;
+}
+
+button.clear {
+  background: linear
+  -gradient(45deg, #B71C1C, #F44336);
+  color: #fff;
+  }
+  
+  button.clear:hover {
+  background: linear-gradient(45deg, #F44336, #B71C1C);
+  color: #fff;
+  }
+  
+  button.dot {
+  font-size: 48px;
+  }
+  
+  @media (max-width: 480px) {
+  .calculator {
+  height: 80vh;
+  width: 90vw;
+  font-size: 20px;
+  }
+  
+  .display {
+  height: 15%;
+  }
+  
+  .buttons {
+  height: 85%;
+  padding: 10px;
+  }
+  
+  button {
+  font-size: 20px;
+  height: 50px;
+  }
+  
+  button.dot {
+  font-size: 32px;
+  }
+}
